@@ -1,5 +1,6 @@
 import { Container, Typography } from "@mui/material"
 import Controls from "../Controls/Controls";
+import NoteList from "../NoteList/NoteList";
 
 const HomePage: React.FC = () => {
     return (
@@ -8,6 +9,7 @@ const HomePage: React.FC = () => {
                 TODO LIST
             </Typography>
             <Controls/>
+            <NoteList></NoteList>
         </Container>
     )
 }
