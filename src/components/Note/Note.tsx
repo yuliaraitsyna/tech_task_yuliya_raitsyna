@@ -35,7 +35,7 @@ const Note: React.FC<NoteProps> = ({ note, openForm }) => {
             maxWidth="lg"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            style={{ display: 'flex', alignItems: 'center', padding: '10px' }}
+            style={{ display: 'flex', alignItems: 'center', padding: '10px', borderBottom: 'solid 1px ##6C63FF' }}
         >
             <Checkbox checked={note.checked} onChange={handleCheck}/>
             <Typography variant="h4">

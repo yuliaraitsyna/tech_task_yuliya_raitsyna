@@ -1,7 +1,8 @@
+import { Theme } from '@emotion/react';
 import { createSlice } from '@reduxjs/toolkit';
 
 interface ThemeState {
-  darkMode: boolean;
+  darkMode: Theme;
 }
 
 const initialState: ThemeState = {

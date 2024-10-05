@@ -43,7 +43,7 @@ const NoteList: React.FC = () => {
 
             <Button
                 variant="contained"
-                style={{ alignSelf: 'end', width: '50px', height: '50px' }}
+                style={{ alignSelf: 'end' }}
                 onClick={() => handleOpen(FormAction.ADD)}
             >
                 <AddIcon />
