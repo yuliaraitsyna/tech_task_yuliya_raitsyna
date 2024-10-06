@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 50px;
+    width: 90%;
+}
+
+.cancel {
+    border-radius: 8px;
+    height: 20px;
+}
+
+.apply {
+    border-radius: 8px;
+}
+
+.input {
+    width: 100%;
+}

@@ -1,6 +1,6 @@
 import { Container, Select, MenuItem, IconButton, SelectChangeEvent } from "@mui/material";
 import SearchBar from "../SearchBar/SearchBar";
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
 import { NoteStatus } from "./model/NoteStatus";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -27,7 +27,7 @@ const Controls: React.FC = () => {
                 <MenuItem value={NoteStatus.PENDING}>{NoteStatus.PENDING}</MenuItem>
             </Select>
             <IconButton onClick={handleThemeChange}>
-                <DarkModeIcon />
+                <DarkModeIcon style={{fill: 'white'}}/>
             </IconButton>
         </Container>
     );

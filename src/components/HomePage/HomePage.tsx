@@ -4,7 +4,7 @@ import NoteList from "../NoteList/NoteList";
 
 const HomePage: React.FC = () => {
     return (
-        <Container style={{marginTop: '50px'}} maxWidth="lg">
+        <Container style={{marginTop: '50px', alignItems: 'center'}} maxWidth="lg">
             <Typography variant="h4" textAlign={"center"}>
                 TODO LIST
             </Typography>

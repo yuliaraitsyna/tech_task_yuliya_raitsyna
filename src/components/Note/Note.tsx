@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Checkbox, Container, IconButton, Typography } from "@mui/material";
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
-import {Note as NoteInterface, removeNote, toggleNote} from "../../redux/notes/notesSlice"
+import { Checkbox, Container, ListItem, Typography } from "@mui/material";
+import EditIcon from '@mui/icons-material/EditOutlined';
+import DeleteIcon from '@mui/icons-material/DeleteOutlined';
+import { Note as NoteInterface, removeNote, toggleNote } from "../../redux/notes/notesSlice"
 import { FormAction } from "../NoteForm/model/FormAction";
 import { useDispatch } from "react-redux";
+import styles from "./styles/Note.module.css"
 
 interface NoteProps {
     note: NoteInterface;
@@ -31,27 +32,22 @@ const Note: React.FC<NoteProps> = ({ note, openForm }) => {
     }
 
     return (
-        <Container
-            maxWidth="lg"
+        <ListItem
+            sx={{ display: 'flex', alignItems: 'center', padding: '10px', borderBottom: '1px solid #6C63FF'}}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            style={{ display: 'flex', alignItems: 'center', padding: '10px', borderBottom: 'solid 1px ##6C63FF' }}
         >
-            <Checkbox checked={note.checked} onChange={handleCheck}/>
+            <Checkbox checked={note.checked} onChange={handleCheck} />
             <Typography variant="h4">
                 {note.title}
             </Typography>
             {hovered && (
                 <Container style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <IconButton onClick={handleOpenForm}>
-                        <EditIcon />
-                    </IconButton>
-                    <IconButton onClick={handleDelete}>
-                        <DeleteIcon />
-                    </IconButton>
+                    <EditIcon onClick={handleOpenForm} className={styles.edit}/>
+                    <DeleteIcon onClick={handleDelete} className={styles.delete}/>
                 </Container>
             )}
-        </Container>
+        </ListItem>
     );
 };
 

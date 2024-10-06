@@ -1,0 +1,22 @@
+.edit {
+    fill: #CDCDCD;
+}
+
+.delete {
+    fill: #CDCDCD;
+}
+
+.edit:hover {
+    fill: #6C63FF;
+}
+
+.delete:hover {
+    fill: red;
+}
+
+.list {
+    display: 'flex';
+    align-items: 'center'; 
+    padding: '10px';
+    border-bottom: '1px solid #6C63FF';
+}
