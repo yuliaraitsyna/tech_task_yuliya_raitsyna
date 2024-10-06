@@ -31,10 +31,11 @@ const NoteForm: React.FC<NoteFormProps> = ({action, note, close}) => {
         close(false);
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
         handleApplyNote();
         close(false);
-    }
+    };
 
     return (
         <form className={styles.form} onSubmit={handleSubmit}>

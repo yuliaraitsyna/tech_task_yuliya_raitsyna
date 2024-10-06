@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { NoteStatus } from '../../components/Controls/model/NoteStatus';
 
 export interface Note {
   id: number;
@@ -8,10 +9,14 @@ export interface Note {
 
 interface NotesState {
   notes: Note[];
+  searchTerm: string;
+  filter: NoteStatus;
 }
 
 const initialState: NotesState = {
   notes: [],
+  searchTerm: '',
+  filter: NoteStatus.ALL,
 };
 
 export const notesSlice = createSlice({
@@ -43,9 +48,15 @@ export const notesSlice = createSlice({
     },
     removeAllNotes: (state) => {
         state.notes = [];
-    }
+    },
+    setSearchTerm: (state, action: PayloadAction<string>) => {
+        state.searchTerm = action.payload;
+    },
+    setFilter: (state, action: PayloadAction<NoteStatus>) => {
+        state.filter = action.payload;
+    },
   },
 });
 
-export const { addNote, editNote, toggleNote, removeNote } = notesSlice.actions;
+export const { addNote, editNote, toggleNote, removeNote, setSearchTerm, setFilter } = notesSlice.actions;
 export default notesSlice.reducer;
