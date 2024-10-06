@@ -71,7 +71,7 @@ const NoteList: React.FC = () => {
                     filteredNotes.map((note, index) => <Note key={index} note={note} openForm={handleOpen} />)
                 ) : (
                     <Container style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
-                        <img src="/public/empty_logo.png" style={{ maxHeight: '300px', maxWidth: '300px' }} />
+                        <img src="/tech_task_yuliya_raitsyna/public/empty_logo.png" style={{ maxHeight: '300px', maxWidth: '300px' }} alt="Empty"/>
                         <Typography variant="h6" color="textSecondary" sx={{ mt: 3 }}>
                             Empty...
                         </Typography>
